@@ -17,8 +17,8 @@ class Url
   def query_params
     return {} if @uri.query.nil?
 
-    @uri.query.split("&").each_with_object({}) do |str, params|
-      key, value = str.split("=")
+    @uri.query.split('&').each_with_object({}) do |str, params|
+      key, value = str.split('=')
       params[key.to_sym] = value
     end
   end
