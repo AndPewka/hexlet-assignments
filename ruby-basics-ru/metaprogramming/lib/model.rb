@@ -60,7 +60,8 @@ module Model
       "integer"  => ->(v) { v.to_i },
       "float"    => ->(v) { v.to_f },
       "symbol"   => ->(v) { v.to_sym },
-      "datetime" => ->(v) { DateTime.parse(v.to_s) }
+      "datetime" => ->(v) { DateTime.parse(v.to_s) },
+      "boolean" => ->(v) { !!v }
     }
   end
 end
