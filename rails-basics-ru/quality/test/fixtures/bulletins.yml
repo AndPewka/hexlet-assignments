@@ -1,0 +1,15 @@
+
+one:
+  title: "First Bulletin"
+  body: "This is the body of the first bulletin."
+  published: true
+
+two:
+  title: "Second Bulletin"
+  body: "This is the body of the second bulletin."
+  published: false
+
+three:
+  title: "Third Bulletin"
+  body: "This is the body of the third bulletin."
+  published: true
