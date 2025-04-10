@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Task</title>
+</head>
+<body>
+
+  <h1>Create New Task</h1>
+
+  <%= form_with model: @task, local: true do |form| %>
+    <% if @task.errors.any? %>
+      <div class="errors">
+        <h2>Errors:</h2>
+        <ul>
+          <% @task.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :name, "Task Name" %><br>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :description, "Description" %><br>
+      <%= form.text_area :description %>
+    </div>
+
+    <div>
+      <%= form.label :status, "Status" %><br>
+      <%= form.text_field :status %>
+    </div>
+
+    <div>
+      <%= form.label :creator, "Creator" %><br>
+      <%= form.text_field :creator %>
+    </div>
+
+    <div>
+      <%= form.label :performer, "Assignee" %><br>
+      <%= form.text_field :performer %>
+    </div>
+
+    <div>
+      <%= form.label :completed, "Completed?" %><br>
+      <%= form.check_box :completed %>
+    </div>
+
+    <div>
+      <%= form.submit "Create Task" %>
+    </div>
+  <% end %>
+
+  <p><%= link_to "Back to Task List", tasks_path %></p>
+
+</body>
+</html>

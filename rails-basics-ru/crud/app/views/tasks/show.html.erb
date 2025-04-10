@@ -1,0 +1,13 @@
+<h1><%= @task.name %></h1>
+
+<p><strong>Description:</strong> <%= @task.description.presence || "none" %></p>
+<p><strong>Status:</strong> <%= @task.status %></p>
+<p><strong>Creator:</strong> <%= @task.creator %></p>
+<p><strong>Assignee:</strong> <%= @task.performer.presence || "not assigned" %></p>
+<p><strong>Completed:</strong> <%= @task.completed ? "Yes" : "No" %></p>
+
+<hr>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back to List', tasks_path %> |
+<%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: 'Are you sure?' } %>
