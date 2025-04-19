@@ -1,0 +1,23 @@
+= content_for :title do
+  = @user.name
+
+/ BEGIN
+h1 = @user.name
+
+h2 Tasks
+
+- if @user.tasks.any?
+  ul
+    - @user.tasks.each do |task|
+      li
+        = link_to task.name, task_path(task)
+        |  – Status: #{task.status.name}
+else
+  p This user has no tasks yet.
+
+/ END
+hr
+
+.d-flex
+  = link_to 'Edit', edit_user_path(@user), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'

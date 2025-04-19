@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: statuses
+#
+#  id         :integer          not null, primary key
+#  name       :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# END
+
+
+new_status:
+  name: New
+
+in_progress:
+  name: In Progress
+
+done:
+  name: Done
