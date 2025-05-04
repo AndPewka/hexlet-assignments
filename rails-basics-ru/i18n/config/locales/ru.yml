@@ -1,0 +1,49 @@
+---
+ru:
+  actions:
+    confirm: Вы уверены?
+  activerecord:
+    attributes:
+      post:
+        body: Содержание
+        title: Заголовок
+      post/comment:
+        body: Содержание
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: Название Должно быть заполнено
+    models:
+      post: Пост
+      post/comment: Комментарий
+  app:
+    footer: "© Хекслет, %{year}"
+    title: Блог Хекслета
+  back: Назад
+  destroy: Delete
+  destroy_confirmation: Вы уверены?
+  edit: Редактировать
+  home:
+    index:
+      title: Домашняя страница
+  nav:
+    hexlet_logo: Хекслет
+    home: Домой
+    posts: Посты
+  posts:
+    index:
+      actions:
+        destroy: Удалить
+        edit: Изменить
+        show: Показать
+      comments:
+        few: "%{count} комментария"
+        many: "%{count} комментариев"
+        one: 1 комментарий
+        other: "%{count} комментария"
+        zero: нет комментариев
+      new: Новый пост
+      title: Посты
+  show: Показать

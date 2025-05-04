@@ -1,0 +1,17 @@
+---
+ru:
+  posts:
+    create:
+      success: Пост создан.
+    destroy:
+      success: Пост удален.
+    edit:
+      title: Редактировать пост
+    form:
+      title: Создать пост
+    show:
+      body: Содержание
+      comments: Комментарии
+    update:
+      success: Пост обновлен.
+

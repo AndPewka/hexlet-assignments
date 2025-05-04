@@ -1,0 +1,47 @@
+---
+en:
+  actions:
+    confirm: Are you sure?
+  activerecord:
+    attributes:
+      post:
+        body: Body
+        title: Title
+      post/comment:
+        body: Body
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: should be filled
+    models:
+      post: Post
+      post/comment: Comment
+  app:
+    footer: "© Hexlet, %{year}"
+    title: Hexlet Blog
+  back: Back
+  destroy: Delete
+  destroy_confirmation: Are you sure?
+  edit: Edit
+  home:
+    index:
+      title: Home page
+  nav:
+    hexlet_logo: Hexlet
+    home: Home
+    posts: Posts
+  posts:
+    index:
+      actions:
+        destroy: Delete
+        edit: Edit
+        show: Show
+      comments:
+        one: 1 comment
+        other: "%{count} comments"
+        zero: No comments
+      new: New Post
+      title: Posts
+  show: Show

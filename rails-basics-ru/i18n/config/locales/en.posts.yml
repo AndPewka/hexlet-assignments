@@ -1,0 +1,12 @@
+---
+en:
+  posts:
+    comments:
+      create:
+        success: Comment was created.
+      edit:
+        title: Editing comment
+      update:
+        success: Comment was updated.
+    new:
+      title: New Post

@@ -1,0 +1,16 @@
+---
+en:
+  posts:
+    create:
+      success: Post was created.
+    destroy:
+      success: Post was destroyed.
+    edit:
+      title: Edit Post
+    form:
+      title: Create Post
+    show:
+      body: Body
+      comments: Comments
+    update:
+      success: Post was updated.
