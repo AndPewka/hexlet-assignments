@@ -1,0 +1,37 @@
+- content_for :title do
+  = @post.title
+
+p
+  strong.me-2 Body:
+  = @post.body
+
+/ BEGIN — comments section
+
+hr
+h3 Comments
+
+- @post.post_comments.each do |comment|
+  .mb-2
+    p.mb-1 = comment.body
+    = link_to 'Edit', edit_post_comment_path(@post, comment), class: 'btn btn-sm btn-outline-secondary me-2'
+    = link_to 'Delete', post_comment_path(@post, comment),
+        method: :delete,
+        data: { confirm: 'Are you sure you want to delete this comment?' },
+        class: 'btn btn-sm btn-outline-danger'
+
+hr
+h4 Add a new comment
+
+= form_with url: post_comments_path(@post), scope: :post_comment, local: true do |form|
+  .mb-3
+    = form.label :body, class: 'form-label'
+    = form.text_area :body, class: 'form-control'
+  = form.submit 'Create Comment', class: 'btn btn-primary'
+
+/ END
+
+hr
+
+.d-flex
+  = link_to 'Edit', edit_post_path(@post), class: 'btn btn-outline-primary me-2'
+  = link_to 'Back', :back, class: 'btn btn-outline-primary'

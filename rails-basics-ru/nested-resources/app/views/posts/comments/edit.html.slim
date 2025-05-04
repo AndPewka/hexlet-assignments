@@ -1,0 +1,14 @@
+- content_for :title do
+  = "Edit Comment"
+
+h2.mb-4 Edit Comment
+
+= form_with url: post_comment_path(@post, @comment), scope: :post_comment, local: true do |form|
+  .mb-3
+    = form.label :body, class: 'form-label'
+    = form.text_area :body, class: 'form-control', rows: 5
+  = form.submit 'Update Comment', class: 'btn btn-primary'
+
+hr
+
+= link_to 'Back to Post', post_path(@post), class: 'btn btn-outline-secondary mt-3'
